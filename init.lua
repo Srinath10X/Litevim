@@ -1,2 +1,3 @@
--- Installing plugin manager
 require("plugins")
+require("core.options")
+require("core.keymaps")
