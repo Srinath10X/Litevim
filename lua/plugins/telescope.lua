@@ -1,3 +1,4 @@
+-- telescope.nvim
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
