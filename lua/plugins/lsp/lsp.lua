@@ -20,43 +20,29 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- configure html server
-lspconfig["html"].setup({
-	capabilities = capabilities,
-})
-
--- configure css server
-lspconfig["cssls"].setup({
-	capabilities = capabilities,
-})
-
--- configure tailwindcss server
-lspconfig["tailwindcss"].setup({
-	capabilities = capabilities,
-})
-
--- configure emmet language server
-lspconfig["emmet_ls"].setup({
-	capabilities = capabilities,
-	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-})
-
--- configure lua server (with special settings)
-lspconfig["lua_ls"].setup({
-	capabilities = capabilities,
-	settings = { -- custom settings for lua
-		Lua = {
-			-- make the language server recognize "vim" global
-			diagnostics = {
-				globals = { "vim" },
-			},
-			workspace = {
-				-- make language server aware of runtime files
-				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
+-- table of LSP servers and their configurations
+local servers = {
+	["html"] = { capabilities = capabilities },
+	["cssls"] = { capabilities = capabilities },
+	["tailwindcss"] = { capabilities = capabilities },
+	["emmet_ls"] = { capabilities = capabilities, filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss" } },
+	["lua_ls"] = {
+		capabilities = capabilities,
+		settings = {
+			Lua = {
+				diagnostics = { globals = { "vim" } },
+				workspace = {
+					library = {
+						[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+						[vim.fn.stdpath("config") .. "/lua"] = true,
+					},
 				},
 			},
 		},
 	},
-})
+}
+
+-- set up each LSP server
+for server, config in pairs(servers) do
+	lspconfig[server].setup(config)
+end
