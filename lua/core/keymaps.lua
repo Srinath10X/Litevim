@@ -1,21 +1,21 @@
 -- global leader key
-vim.g.mapleader = " "
+vim.g.mapleader = " " -- <leader> = space key
 
 -- local variable for conciseness
 local keymap = vim.keymap
 
 -- General keymap's
 keymap.set("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as esc
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- to clear search space+h
+keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true }) -- to clear search space+h
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- buffer management
-keymap.set("n", "gt", ":bn<CR>") -- next buffer
-keymap.set("n", "gT", ":bp<CR>") -- previous buffer
-keymap.set("n", "gx", ":bdelete!<CR>") -- buffer delete
+keymap.set("n", "gt", ":bn<CR>", { silent = true }) -- next buffer
+keymap.set("n", "gT", ":bp<CR>", { silent = true }) -- previous buffer
+keymap.set("n", "gx", ":bdelete!<CR>", { silent = true }) -- buffer delete
 
 -- toggle terminal
 keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>") -- buffer delete
@@ -40,7 +40,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 keymap.set("n", "<leader>/", "gcc")
 
 -- nvim tree
-keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", { silent = true })
 
 -- resize
 keymap.set("n", "<leader>[", ":vertical resize +1<CR>")
