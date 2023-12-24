@@ -1,6 +1,10 @@
-# Litevim 🌿
+<h1 style="text-align: center;"> Litevim 🌿 </h1>
 
 Litevim 🚀: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
+
+<h2 style="text-align: center;">Showcase<h2>
+![Showcase1](./assets/2023-12-24-164452_hyprshot.png) 
+![Showcase2](./assets/2023-12-24-160255_hyprshot.png)
 
 ## Features 🚀
 
@@ -29,20 +33,6 @@ Litevim 🚀: A lightweight, easily configurable Neovim setup for a swift and cl
 ```bash
 git clone https://github.com/Srinath/Litevim ~/.config/nvim --depth 1 && nvim
 ```
-
-2. Navigate to the Litevim directory:
-
-```bash
-cd Litevim
-```
-
-3. Copy the configuration files to your Neovim configuration directory:
-
-```bash
-cp -r * ~/.config/nvim/
-```
-
-4. Launch Neovim, and Litevim will automatically set up the plugins and configurations.
 
 ### For Windows
 
