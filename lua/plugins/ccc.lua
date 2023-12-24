@@ -1,4 +1,6 @@
 -- CCC.nvim
+-- Default keybindings is
+-- "i" to change the color format in the editing mode
 return {
 	"uga-rosa/ccc.nvim",
 	config = function()

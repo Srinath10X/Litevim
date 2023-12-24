@@ -49,6 +49,9 @@ keymap.set("n", "<leader>]", ":vertical resize -1<CR>")
 -- vs code like line jump
 keymap.set("i", "<c-Enter>", "<ESC>o")
 
+-- ccc.nvim for color highlighting and color seleciton
+keymap.set("n", "<leader>sc", ":CccPick", { silent = true })
+
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
