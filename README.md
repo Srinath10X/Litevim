@@ -1,9 +1,10 @@
 <h1 style="text-align: center;"> Litevim 🌿 </h1>
 
-Litevim 🚀: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
+**Litevim 🚀**: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
 
-<h2 style="text-align: center;">Showcase<h2>
-![Showcase1](./assets/2023-12-24-164452_hyprshot.png) 
+<h2 style="text-align: center;">Showcase</h2>
+
+![Showcase1](./assets/2023-12-24-164452_hyprshot.png)
 ![Showcase2](./assets/2023-12-24-160255_hyprshot.png)
 
 ## Features 🚀
