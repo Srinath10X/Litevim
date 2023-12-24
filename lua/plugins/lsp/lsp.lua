@@ -25,7 +25,10 @@ local servers = {
 	["html"] = { capabilities = capabilities },
 	["cssls"] = { capabilities = capabilities },
 	["tailwindcss"] = { capabilities = capabilities },
-	["emmet_ls"] = { capabilities = capabilities, filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss" } },
+	["emmet_ls"] = {
+		capabilities = capabilities,
+		filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss" },
+	},
 	["lua_ls"] = {
 		capabilities = capabilities,
 		settings = {

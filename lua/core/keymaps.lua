@@ -3,6 +3,7 @@ vim.g.mapleader = " " -- <leader> = space key
 
 -- local variable for conciseness
 local keymap = vim.keymap
+local opts = { noremap = true }
 
 -- General keymap's
 keymap.set("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as esc
@@ -19,6 +20,13 @@ keymap.set("n", "gx", ":bdelete!<CR>", { silent = true }) -- buffer delete
 
 -- toggle terminal
 keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>") -- buffer delete
+keymap.set("n", "<leader>h", "<Cmd>ToggleTerm direction=horizontal<CR>") -- buffer delete
+keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+keymap.set("t", "fj", [[<C-\><C-n>]], opts)
+keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
+keymap.set("t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
+keymap.set("t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
+keymap.set("t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
