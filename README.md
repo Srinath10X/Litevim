@@ -24,6 +24,7 @@
 - Nerd Font as your terminal font ( **nerd font you set doesn't end with Mono to prevent small icons** ).
 - Windows users must have `mingw` installed and set on path.
 - Ripgrep is required for grep searching with Telescope (**OPTIONAL**).
+- Nodejs or yarn for Markdown preview.
 
 ### Installation
 
@@ -42,6 +43,10 @@ git clone https://github.com/Srinath/Litevim ~/.config/nvim --depth 1 && nvim
 ```bash
 git clone https://github.com/Srinath/Litevim $HOME\AppData\Local\nvim --depth 1 && nvim
 ```
+
+# Plugins
+
+Litevim uses a carefully selected set of plugins to enhance the Neovim editing experience. The plugins are managed using the lazy.nvim plugin manager. Follow the steps below to manage plugins in Litevim.Here is the list of <a href="./docs/plugins.md">pluings</a> used. 
 
 ## Customization 🎨
 
