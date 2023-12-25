@@ -1,3 +1,5 @@
+-- Which key
+
 return {
 	{
 		"folke/which-key.nvim",
