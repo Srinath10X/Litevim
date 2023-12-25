@@ -56,6 +56,7 @@ Litevim comes with a selection of themes to choose from. To change the theme, op
 ```
 
 Replace `<theme-name>` with the name of your preferred theme.
+Or use the keybinding `<leader>th` to select the colorscheme by using telescope
 
 ## Contributing 🤝
 

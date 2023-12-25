@@ -40,3 +40,5 @@ opt.splitbelow = true
 -- iskeyword
 -- for any key word you want to consider as a word while using dw
 -- opt.iskeyword:append("_")
+-- btw these options are from josean-dev/dev-environment-files
+-- https://github.com/josean-dev/dev-environment-files
