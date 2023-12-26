@@ -23,11 +23,14 @@ end
 -- table of LSP servers and their configurations
 local servers = {
 	["html"] = { capabilities = capabilities },
-	["cssls"] = { capabilities = capabilities },
+	["cssls"] = {
+		capabilities = capabilities,
+		filetypes = { "css", "scss" },
+	},
 	["tailwindcss"] = { capabilities = capabilities },
 	["emmet_ls"] = {
 		capabilities = capabilities,
-		filetypes = { "html", "typescriptreact", "javascriptreact", "css", "scss" },
+		filetypes = { "html", "typescriptreact", "javascriptreact", "scss" },
 	},
 	["lua_ls"] = {
 		capabilities = capabilities,

@@ -24,7 +24,7 @@
 - Nerd Font as your terminal font ( **nerd font you set doesn't end with Mono to prevent small icons** ).
 - Windows users must have `mingw` installed and set on path.
 - Ripgrep is required for grep searching with Telescope (**OPTIONAL**).
-- Nodejs or yarn for Markdown preview.
+- Nodejs or yarn for installing lsp's
 
 ### Installation
 
