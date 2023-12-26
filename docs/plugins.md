@@ -113,3 +113,6 @@
 
 ## 38. [which-key.nvim](https://github.com/folke/which-key.nvim)
    - Description: A neovim plugin for displaying keybindings.
+
+## 39. [accelerated-jk.nvim](https://github.com/rainbowhxch/accelerated-jk.nvim)
+   - Description: A Neovim plugin accelerates j/k mappings' steps while j or k key is repeating. 
