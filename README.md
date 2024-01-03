@@ -4,8 +4,8 @@
 
 ## Showcase
 
-![Showcase1](./assets/2023-12-24-164452_hyprshot.png)
-![Showcase2](./assets/2023-12-24-160255_hyprshot.png)
+![Showcase1](./assets/showcase-1.png)
+![Showcase2](./assets/showcase-2.png)
 
 ## Table of Contents
 
