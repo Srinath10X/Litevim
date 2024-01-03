@@ -1,4 +1,4 @@
-# Litevim 🌿 
+# Litevim v0.3.4🌿
 
 **Litevim 🚀**: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
 
@@ -61,7 +61,7 @@ git clone https://github.com/Srinath/Litevim $HOME\AppData\Local\nvim --depth 1 
 
 # Plugins
 
-Litevim uses a carefully selected set of plugins to enhance the Neovim editing experience. The plugins are managed using the lazy.nvim plugin manager. Follow the steps below to manage plugins in Litevim.Here is the list of <a href="./docs/plugins.md">pluings</a> used. 
+Litevim uses a carefully selected set of plugins to enhance the Neovim editing experience. The plugins are managed using the lazy.nvim plugin manager. Follow the steps below to manage plugins in Litevim.Here is the list of <a href="./docs/plugins.md">pluings</a> used.
 
 ## Customization 🎨
 
