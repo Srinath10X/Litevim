@@ -10,6 +10,11 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
+local typescript_setup, typescript = pcall(require, "typescript")
+if not typescript_setup then
+	return
+end
+
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
@@ -52,3 +57,11 @@ local servers = {
 for server, config in pairs(servers) do
 	lspconfig[server].setup(config)
 end
+
+-- configure typescript server with plugin
+typescript.setup({
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
+})
