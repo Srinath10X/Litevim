@@ -19,8 +19,7 @@ keymap.set("n", "gT", ":bp<CR>", { silent = true }) -- previous buffer
 keymap.set("n", "gx", ":bdelete!<CR>", { silent = true }) -- buffer delete
 
 -- toggle terminal
-keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>") -- buffer delete
-keymap.set("n", "<leader>h", "<Cmd>ToggleTerm direction=horizontal<CR>") -- buffer delete
+keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>") -- floating terminal
 keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 keymap.set("t", "fj", [[<C-\><C-n>]], opts)
 keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
@@ -51,8 +50,8 @@ keymap.set("n", "<leader>/", "gcc")
 keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", { silent = true })
 
 -- resize
-keymap.set("n", "<leader>[", ":vertical resize +1<CR>")
-keymap.set("n", "<leader>]", ":vertical resize -1<CR>")
+keymap.set("n", "<leader>[", ":vertical resize +1<CR>", { silent = true })
+keymap.set("n", "<leader>]", ":vertical resize -1<CR>", { silent = true })
 
 -- vs code like line jump
 keymap.set("i", "<c-Enter>", "<ESC>o")
