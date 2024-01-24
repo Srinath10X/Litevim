@@ -51,6 +51,15 @@ return {
 				},
 			},
 			lualine_c = {},
+			lualine_z = {
+				{
+					"location",
+					separator = {
+						left = "",
+						right = "",
+					},
+				},
+			},
 		},
 	},
 }
