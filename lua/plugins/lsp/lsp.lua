@@ -37,6 +37,15 @@ local servers = {
 		capabilities = capabilities,
 		filetypes = { "html", "typescriptreact", "javascriptreact", "scss" },
 	},
+	["rust_analyzer"] = {
+		capabilities = capabilities,
+		cmd = {
+			"rustup",
+			"run",
+			"stable",
+			"rust-analyzer",
+		},
+	},
 	["lua_ls"] = {
 		capabilities = capabilities,
 		settings = {
