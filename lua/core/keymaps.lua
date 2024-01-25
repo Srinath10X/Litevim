@@ -14,8 +14,8 @@ keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- buffer management
-keymap.set("n", "<M-j>", ":bn<CR>", { silent = true }) -- next buffer
-keymap.set("n", "<M-h>", ":bp<CR>", { silent = true }) -- previous buffer
+keymap.set("n", "gt", ":bn<CR>", { silent = true }) -- next buffer
+keymap.set("n", "gT", ":bp<CR>", { silent = true }) -- previous buffer
 keymap.set("n", "gx", ":bdelete!<CR>", { silent = true }) -- buffer delete
 
 -- toggle terminal

@@ -25,6 +25,15 @@ return {
 						none = " ",
 					},
 				},
+				icons = {
+					glyphs = {
+						folder = {
+							-- for your custom icons in folder opening and closing in nvim-tree
+							-- arrow_closed = "  ",
+							-- arrow_open = "  ",
+						},
+					},
+				},
 			},
 		})
 	end,
