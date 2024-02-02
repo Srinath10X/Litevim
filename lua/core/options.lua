@@ -2,7 +2,10 @@
 local opt = vim.opt
 
 -- tilder sing
-vim.opt.fillchars = { eob = " " } -- remove's tilder sign for blanks
+opt.fillchars = { eob = " " } -- remove's tilder sign for blanks
+
+-- status line
+opt.laststatus = 3
 
 -- line number's
 opt.number = true
