@@ -1,3 +1,5 @@
+vim.api.nvim_set_hl(0, "CmpNormal", { bg = "#1E1E2E" })
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
   return
@@ -121,10 +123,12 @@ require("cmp").setup({
   },
   window = {
     completion = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      border = "rounded",
+      winhighlight = "Normal:CmpNormal",
     },
     documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      border = "rounded",
+      winhighlight = "Normal:CmpNormal",
     },
   },
   experimental = {
