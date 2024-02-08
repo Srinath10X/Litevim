@@ -1,5 +1,12 @@
 -- lualine
 
+local diagnostics = {
+  "diagnostics",
+  sections = { "error", "warn" },
+  colored = false, -- Displays diagnostics status in color if set to true.
+  always_visible = true, -- Show diagnostics even if there are none.
+}
+
 return {
   -- Set lualine as statusline
   "nvim-lualine/lualine.nvim",
@@ -51,6 +58,7 @@ return {
         },
       },
       lualine_c = {},
+      lualine_x = { diagnostics },
       lualine_z = {
         {
           "location",
