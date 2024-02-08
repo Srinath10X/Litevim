@@ -3,7 +3,7 @@
 local diagnostics = {
   "diagnostics",
   sections = { "error", "warn" },
-  colored = false, -- Displays diagnostics status in color if set to true.
+  colored = true, -- Displays diagnostics status in color if set to true.
   always_visible = true, -- Show diagnostics even if there are none.
 }
 
