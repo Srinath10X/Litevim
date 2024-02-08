@@ -8,6 +8,7 @@ local opts = { noremap = true }
 -- General keymap's
 keymap.set("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as esc
 keymap.set("n", "<leader>nh", ":nohl<CR>", { silent = true }) -- to clear search space+h
+keymap.set("i", "<C-BS>", "<C-W>")
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
