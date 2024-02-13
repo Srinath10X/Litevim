@@ -82,3 +82,14 @@ keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>") -- jump to previo
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>") -- jump to next diagnostic in buffer
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>") -- show documentation for what is under cursor
 keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>") -- see outline on right hand side
+
+-- bufferline
+keymap.set("n", "<leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>")
+keymap.set("n", "<leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>")
+keymap.set("n", "<leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>")
+keymap.set("n", "<leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>")
+keymap.set("n", "<leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>")
+keymap.set("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>")
+keymap.set("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>")
+keymap.set("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>")
+keymap.set("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>")
