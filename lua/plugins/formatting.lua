@@ -20,6 +20,7 @@ return {
         graphql = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        c = { "clangd" },
       },
       format_on_save = {
         lsp_fallback = true,
