@@ -11,6 +11,7 @@ return {
 
   {
     "LunarVim/lunar.nvim", -- lunar theme
+    name = "lunar",
   },
 
   {

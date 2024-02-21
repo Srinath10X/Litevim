@@ -20,7 +20,8 @@ return {
       theme = "catppuccin",
       -- disabled_filetypes = { "NvimTree" },
       component_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
     },
 
     --[[
@@ -40,9 +41,10 @@ return {
           icon = "",
           "mode",
           right_padding = 2,
+          left_padding = 2,
           separator = {
-            left = "",
-            right = "",
+            left = "",
+            right = "",
           },
         },
       },
@@ -59,12 +61,22 @@ return {
       },
       lualine_c = {},
       lualine_x = { diagnostics },
-      lualine_z = {
+      lualine_y = {
         {
-          "location",
+          "filetype",
+          color = { fg = "#bcc0cc" },
           separator = {
             left = "",
-            right = "",
+          },
+        },
+      },
+      lualine_z = {
+        {
+          "progress",
+          icon = "󰦨",
+          separator = {
+            left = "",
+            right = "",
           },
         },
       },
