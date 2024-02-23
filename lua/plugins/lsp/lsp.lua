@@ -38,6 +38,19 @@ local servers = {
     filetypes = { "html", "typescriptreact", "javascriptreact", "scss" },
   },
   ["clangd"] = { capabilities = capabilities },
+  ["pylsp"] = { capabilities = capabilities },
+  ["gopls"] = {
+    capabilities = capabilities,
+    cmd = { "gopls" },
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  },
   ["rust_analyzer"] = {
     capabilities = capabilities,
     cmd = {

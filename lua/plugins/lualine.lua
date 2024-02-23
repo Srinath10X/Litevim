@@ -66,7 +66,7 @@ return {
           "filetype",
           color = { fg = "#bcc0cc" },
           separator = {
-            left = "",
+            left = "",
           },
         },
       },
@@ -75,7 +75,7 @@ return {
           "progress",
           icon = "󰦨",
           separator = {
-            left = "",
+            left = "",
             right = "",
           },
         },
