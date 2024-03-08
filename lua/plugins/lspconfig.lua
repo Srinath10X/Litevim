@@ -6,12 +6,10 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua-language-server",
+					"lua_ls",
 					"html",
 					"cssls",
 					"tsserver",
-					"nextls",
-					"prettier",
 				},
 			})
 		end,
