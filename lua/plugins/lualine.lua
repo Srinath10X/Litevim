@@ -21,7 +21,7 @@ return {
       -- disabled_filetypes = { "NvimTree" },
       component_separators = { left = "", right = "" },
       -- section_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
     },
 
     --[[
@@ -43,8 +43,8 @@ return {
           right_padding = 2,
           left_padding = 2,
           separator = {
-            left = "",
-            right = "",
+            left = "",
+            right = "",
           },
         },
       },
@@ -66,7 +66,7 @@ return {
           "filetype",
           color = { fg = "#bcc0cc" },
           separator = {
-            left = "",
+            left = "",
           },
         },
       },
@@ -75,8 +75,8 @@ return {
           "progress",
           icon = "󰦨",
           separator = {
-            left = "",
-            right = "",
+            left = "",
+            right = "",
           },
         },
       },
