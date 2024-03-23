@@ -14,7 +14,7 @@ return {
         svelte = { "prettierd" },
         css = { "prettierd" },
         html = { "prettierd" },
-				nix = { "prettierd"},
+        nix = { "prettierd" },
         json = { "prettierd" },
         yaml = { "prettierd" },
         markdown = { "prettierd" },

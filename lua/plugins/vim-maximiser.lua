@@ -1,4 +1,4 @@
 -- Vim maximiser
 return {
-	"szw/vim-maximizer",
+  "szw/vim-maximizer",
 }
