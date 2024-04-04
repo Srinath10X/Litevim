@@ -13,7 +13,6 @@ local diagnostics = {
 local colors = {
   blue = "#80a0ff",
   cyan = "#79dac8",
-  -- black = "#1e2030", -- catppuccin
   black = "#1E1E2E", -- catppuccin
   white = "#c6c6c6",
   red = "#ff5189",
@@ -52,8 +51,8 @@ require("lualine").setup({
       { icon = "", "mode", separator = { left = "", right = "" }, right_padding = 2 },
     },
     lualine_b = {
-      "filename",
-      "branch",
+      { "filename" },
+      { "branch" },
     },
     lualine_c = { "fileformat" },
     lualine_x = { diagnostics },
