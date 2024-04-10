@@ -8,6 +8,15 @@ local M = {
       -- vim.cmd.colorscheme("catppuccin")
       vim.cmd.colorscheme("catppuccin")
     end,
+    opts = {
+      highlight_overrides = {
+        all = function(colors)
+          return {
+            NvimTreeFolderIcon = { fg = colors.mauve },
+          }
+        end,
+      },
+    },
   },
 
   {

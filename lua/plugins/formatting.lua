@@ -22,6 +22,7 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         c = { "clangd" },
+        rust = { "rustfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
