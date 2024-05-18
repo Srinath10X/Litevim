@@ -21,6 +21,7 @@ opt.wrap = true -- wrap the line
 -- search
 opt.ignorecase = true -- for non-case-sensitive search
 opt.smartcase = true -- for upper-case search
+opt.hlsearch = false -- false highlighting on search
 
 -- cursor line
 opt.cursorline = true -- enable's the cursor line
@@ -39,6 +40,14 @@ opt.clipboard:append("unnamedplus") -- to copy something from neovim to the syst
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- backup & swap
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
+
+-- scroll off
+opt.scrolloff = 8
 
 -- iskeyword
 -- for any key word you want to consider as a word while using dw
