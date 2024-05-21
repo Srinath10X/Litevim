@@ -4,53 +4,33 @@ local opt = vim.opt
 -- tilder sing
 opt.fillchars = { eob = " " } -- remove's tilder sign for blanks
 
--- status line
-opt.laststatus = 3
+local function set_opts(opts)
+	for k, v in pairs(opts) do
+		vim.o[k] = v
+	end
+end
 
--- line number's
-opt.number = true
-opt.relativenumber = true
+set_opts({
+	number = true,
+	relativenumber = true,
+	tabstop = 2,                   -- 2 spaces for tab-key
+	shiftwidth = 2,                -- 2 spaces for indentation
+	wrap = true,                   -- wrap the line
+	laststatus = 3,                -- status line
+	ignorecase = true,             -- for non-case-sensitive search
+	smartcase = true,              -- for upper-case search
+	hlsearch = false,              -- false highlighting on search
+	cursorline = true,             -- enable's the cursor line
+	termguicolors = true,          -- use's terminal gui color's
+	background = "dark",           -- for dark background
+	signcolumn = "yes",            -- trust me bro
+	backspace = "indent,eol,start", -- just to work our backspace key properly
+	splitright = true,
+	splitbelow = true,
+	backup = false,
+	writebackup = false,
+	swapfile = false,
+	scrolloff = 8,
+})
 
--- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tab-key
-opt.shiftwidth = 2 -- 2 spaces for indentation
-
--- line wrapping
-opt.wrap = true -- wrap the line
-
--- search
-opt.ignorecase = true -- for non-case-sensitive search
-opt.smartcase = true -- for upper-case search
-opt.hlsearch = false -- false highlighting on search
-
--- cursor line
-opt.cursorline = true -- enable's the cursor line
-
--- appereance
-opt.termguicolors = true -- use's terminal gui color's
-opt.background = "dark" -- for dark background
-opt.signcolumn = "yes" -- trust me bro
-
--- backspace
-opt.backspace = "indent,eol,start" -- just to work our backspace key properly
-
--- clipboard
 opt.clipboard:append("unnamedplus") -- to copy something from neovim to the system clipboard
-
--- split windows
-opt.splitright = true
-opt.splitbelow = true
-
--- backup & swap
-opt.backup = false
-opt.writebackup = false
-opt.swapfile = false
-
--- scroll off
-opt.scrolloff = 8
-
--- iskeyword
--- for any key word you want to consider as a word while using dw
--- opt.iskeyword:append("_")
--- btw these options are from josean-dev/dev-environment-files
--- https://github.com/josean-dev/dev-environment-files
