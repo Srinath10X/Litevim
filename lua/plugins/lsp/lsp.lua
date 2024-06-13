@@ -37,7 +37,10 @@ local servers = {
     capabilities = capabilities,
     filetypes = { "html", "typescriptreact", "javascriptreact", "scss" },
   },
-  ["clangd"] = { capabilities = capabilities },
+  ["clangd"] = {
+    capabilities = capabilities,
+    filetypes = { "c", "cpp" },
+  },
   ["nil_ls"] = { capabilities = capabilities },
   ["pylsp"] = { capabilities = capabilities },
   ["gopls"] = {

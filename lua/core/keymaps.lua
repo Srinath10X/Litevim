@@ -20,7 +20,7 @@ keymap.set("n", "gT", ":bp<CR>", { silent = true }) -- previous buffer
 keymap.set("n", "gx", ":bdelete!<CR>", { silent = true }) -- buffer delete
 
 -- toggle terminal
-keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>") -- floating terminal
+keymap.set("n", "<c-t>", ":ToggleTerm direction=float<CR>", opts) -- floating terminal
 keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 keymap.set("t", "fj", [[<C-\><C-n>]], opts)
 keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)

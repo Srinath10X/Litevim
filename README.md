@@ -56,7 +56,7 @@ git clone https://github.com/Srinath10X/Litevim.git ~/.config/nvim --depth 1 && 
 1. Clone the Litevim repository to your local machine:
 
 ```bash
-git clone https://github.com/Srinath10X/Litevim.git $HOME\AppData\Local\nvim --depth 1 && nvim
+git clone https://github.com/Srinath10X/Litevim.git $env:LOCALAPPDATA\nvim --depth 1 && nvim
 ```
 
 # Plugins
