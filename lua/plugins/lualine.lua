@@ -62,6 +62,7 @@ return {
         lualine_x = { diagnostics },
         lualine_y = {
           { "filetype" },
+          { "fileformat" },
           { "branch" },
         },
         lualine_z = {
