@@ -18,7 +18,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Settign up leader key before loading lazy
 vim.g.mapleader = " "
 
 -- Setup lazy.nvim
