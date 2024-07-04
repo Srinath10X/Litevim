@@ -27,7 +27,9 @@ return {
 		}
 
 		dashboard.section.footer.val = {
-			"Litevim v0.3.6",
+			"",
+			"Litevim v0.3.6-dev",
+			""
 		}
 
 		-- Send config to alpha
