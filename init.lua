@@ -14,12 +14,20 @@ local Modules = {
 }
 
 local function requireModules(modules, prefix)
-  prefix = prefix or ""
-  for key, module in pairs(modules) do
-    if type(module) == "string" then
-      require(prefix .. module)
-    elseif type(module) == "table" then
-      requireModules(module, prefix .. key .. ".")
+  local stack = { { modules = modules, prefix = prefix or "" } }
+  while #stack > 0 do
+    local current = table.remove(stack)
+    local currentModules = current.modules
+    local currentPrefix = current.prefix
+
+    for key, module in pairs(currentModules) do
+      if type(module) == "string" then
+        require(currentPrefix .. module)
+      elseif type(module) == "table" then
+        table.insert(stack, { modules = module, prefix = currentPrefix .. key .. "." })
+      else
+        error("Invalid module type: " .. type(module))
+      end
     end
   end
 end
