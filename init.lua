@@ -17,8 +17,7 @@ local function requireModules(modules, prefix)
   local stack = { { modules = modules, prefix = prefix or "" } }
   while #stack > 0 do
     local current = table.remove(stack)
-    local currentModules = current.modules
-    local currentPrefix = current.prefix
+    local currentModules, currentPrefix = current.modules, current.prefix
 
     for key, module in pairs(currentModules) do
       if type(module) == "string" then
