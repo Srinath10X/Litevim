@@ -1,5 +1,6 @@
 -- global leader key
-vim.g.mapleader = " " -- <leader> = space key
+-- <leader> = <space> key
+vim.g.mapleader = " "
 
 -- local variable for conciseness
 local keymap = vim.keymap
