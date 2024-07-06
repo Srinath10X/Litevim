@@ -1,7 +1,6 @@
 return {
   "rainbowhxch/accelerated-jk.nvim",
   event = "BufEnter",
-  lazy = true,
   opts = {
     mode = "time_driven",
     enable_deceleration = false,

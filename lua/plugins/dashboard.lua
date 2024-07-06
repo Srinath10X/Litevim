@@ -28,7 +28,7 @@ return {
 
     dashboard.section.footer.val = {
       "",
-      "Litevim v0.3.6-dev",
+      "Litevim v0.3.7-1",
       "",
     }
 

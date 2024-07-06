@@ -1,9 +1,14 @@
-local function set_opts(opts)
+local function set_opts(opts, is_global)
   for k, v in pairs(opts) do
-    vim.o[k] = v
+    if is_global then
+      vim.g[k] = v
+    else
+      vim.o[k] = v
+    end
   end
 end
 
+-- Default Options
 set_opts({
   number = true, -- enables number lines
   relativenumber = true, -- enables relativenumber lines
@@ -27,4 +32,15 @@ set_opts({
   scrolloff = 8, -- scroll before 8 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
-})
+}, false)
+
+-- Global Options
+set_opts({
+  mapleader = " ", -- setting up leader key = <space>
+
+  -- Neovide Padding Opts
+  neovide_padding_top = 20,
+  neovide_padding_bottom = 10,
+  neovide_padding_right = 15,
+  neovide_padding_left = 15,
+}, true)
