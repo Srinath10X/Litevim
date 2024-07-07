@@ -32,6 +32,7 @@ set_opts({
   scrolloff = 8, -- scroll before 8 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
+  conceallevel = 2,
 }, false)
 
 -- Global Options
