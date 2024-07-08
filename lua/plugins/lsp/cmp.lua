@@ -1,10 +1,12 @@
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
+local utils = require("core.utils")
+
+local cmp = utils.safe_require("cmp")
+if not cmp then
   return
 end
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
+local luasnip = utils.safe_require("luasnip")
+if not luasnip then
   return
 end
 

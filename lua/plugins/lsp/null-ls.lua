@@ -1,6 +1,9 @@
+-- Importing utils
+local utils = require("core.utils")
+
 -- import null-ls plugin safely
-local setup, null_ls = pcall(require, "null-ls")
-if not setup then
+local null_ls = utils.safe_require("null-ls")
+if not null_ls then
   return
 end
 

@@ -1,12 +1,6 @@
-local function set_opts(opts, is_global)
-  for k, v in pairs(opts) do
-    if is_global then
-      vim.g[k] = v
-    else
-      vim.o[k] = v
-    end
-  end
-end
+-- Importing set_opts from utils
+local utils = require("core.utils")
+local set_opts = utils.set_opts
 
 -- Default Options
 set_opts({
@@ -32,7 +26,7 @@ set_opts({
   scrolloff = 8, -- scroll before 8 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
-  conceallevel = 2,
+  conceallevel = 2, -- requried for obsidian
 }, false)
 
 -- Global Options

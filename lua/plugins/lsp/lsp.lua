@@ -1,17 +1,19 @@
+local utils = require("core.utils")
+
 -- import lspconfig plugin safely
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
+local lspconfig = utils.safe_require("lspconfig")
+if not lspconfig then
   return
 end
 
 -- import cmp-nvim-lsp plugin safely
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status then
+local cmp_nvim_lsp = utils.safe_require("cmp_nvim_lsp")
+if not cmp_nvim_lsp then
   return
 end
 
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
+local typescript = utils.safe_require("typescript")
+if not typescript then
   return
 end
 

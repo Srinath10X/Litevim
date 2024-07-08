@@ -1,9 +1,14 @@
-local M = {
+-- This file contains all the basic plugins such as
+-- Autopairs,AcceleratedJk,Comment,ToggleTerm,Outline
+
+local Basic = {
+  -- Autopairs
   autopairs = {
     "windwp/nvim-autopairs",
     opts = {},
   },
 
+  -- Accelerated
   accelerated = {
     "rainbowhxch/accelerated-jk.nvim",
     event = "BufEnter",
@@ -16,32 +21,31 @@ local M = {
     },
   },
 
+  -- Comment
   comment = {
     "numToStr/Comment.nvim",
     event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      require("Comment").setup()
-    end,
+    opts = {},
   },
 
+  -- ToggleTerm
   toggle_term = {
     "akinsho/toggleterm.nvim",
-    config = function()
-      require("toggleterm").setup({
-        open_mapping = [[<c-t>]],
-        direction = "float",
-        float_opts = {
-          border = "curved",
-          winblend = 0,
-          highlights = {
-            border = "Normal",
-            background = "Normal",
-          },
+    opts = {
+      open_mapping = [[<M-t>]],
+      direction = "float",
+      float_opts = {
+        border = "curved",
+        winblend = 0,
+        highlights = {
+          border = "Normal",
+          background = "Normal",
         },
-      })
-    end,
+      },
+    },
   },
 
+  -- Outline
   outline = {
     "hedyhli/outline.nvim",
     lazy = true,
@@ -54,9 +58,9 @@ local M = {
 }
 
 return {
-  M.autopairs,
-  M.accelerated,
-  M.comment,
-  M.toggle_term,
-  M.outline,
+  Basic.autopairs,
+  Basic.accelerated,
+  Basic.comment,
+  Basic.toggle_term,
+  Basic.outline,
 }

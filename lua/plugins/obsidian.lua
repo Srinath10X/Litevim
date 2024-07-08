@@ -30,7 +30,11 @@ return {
           return nil
         end,
       },
-      ["<leader>tt"] = {},
+      ["<leader>tt"] = {
+        action = function()
+          vim.cmd.ObsidianToggleCheckbox()
+        end,
+      },
     },
   },
 }

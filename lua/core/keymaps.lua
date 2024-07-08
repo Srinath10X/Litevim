@@ -1,11 +1,6 @@
--- Helper function to set key mappings with default options
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+-- Importing map from utils
+local utils = require("core.utils")
+local map = utils.map
 
 -- General keymaps
 map("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as <esc>
