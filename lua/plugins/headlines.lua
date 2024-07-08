@@ -1,6 +1,4 @@
 -- https://github.com/lukas-reineke/headlines.nvim
--- This already comes installed with lazyvim but I modify the heading colors and
--- also the lines above and below
 -- It also adds these { "◉", "○", "✸", "✿" } symbols in headings
 
 return {
@@ -23,13 +21,7 @@ return {
     -- Setup headlines.nvim with the newly defined highlight groups
     require("headlines").setup({
       markdown = {
-        -- If set to false, headlines will be a single line and there will be no
-        -- "fat_headline_upper_string" and no "fat_headline_lower_string"
         fat_headlines = false,
-        --
-        -- Lines added above and below the header line makes it look thicker
-        -- "lower half block" unicode symbol hex:2584
-        -- "upper half block" unicode symbol hex:2580
         fat_headline_upper_string = "▄",
         fat_headline_lower_string = "▀",
         --
@@ -49,14 +41,6 @@ return {
           "Headline5",
           "Headline6",
         },
-        -- bullet_highlights = {
-        --   "@text.title.1.marker.markdown",
-        --   "@text.title.2.marker.markdown",
-        --   "@text.title.3.marker.markdown",
-        --   "@text.title.4.marker.markdown",
-        --   "@text.title.5.marker.markdown",
-        --   "@text.title.6.marker.markdown",
-        -- },
         bullet_highlights = {
           "@text.title.1.marker.markdown",
           "@text.title.2.marker.markdown",

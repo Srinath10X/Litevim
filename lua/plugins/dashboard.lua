@@ -1,4 +1,4 @@
-return {
+local Dashboard = {
   "goolord/alpha-nvim",
   requires = { "nvim-tree/nvim-web-devicons" },
   config = function()
@@ -39,3 +39,5 @@ return {
     vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ]])
   end,
 }
+
+return Dashboard
