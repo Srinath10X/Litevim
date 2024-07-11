@@ -12,6 +12,7 @@ if not cmp_nvim_lsp then
   return
 end
 
+-- import typescript plugin safely
 local typescript = utils.safe_require("typescript")
 if not typescript then
   return

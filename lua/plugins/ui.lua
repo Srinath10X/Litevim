@@ -12,18 +12,20 @@ local Ui = {
     },
   },
 
+  -- Gitsigns
   gitsigns = {
     "lewis6991/gitsigns.nvim",
     opts = {},
   },
+
+  -- IndentBlankline
   indent_blankline = {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    config = function()
-      require("ibl").setup()
-    end,
     opts = {},
   },
+
+  -- NvimTree
   nvim_tree = {
     "nvim-tree/nvim-tree.lua",
     config = function()
@@ -69,6 +71,8 @@ local Ui = {
       })
     end,
   },
+
+  -- Bufferline
   bufferline = {
     "akinsho/bufferline.nvim",
     version = "*",
@@ -89,6 +93,8 @@ local Ui = {
       },
     },
   },
+
+  -- Dressing
   dressing = {
     "stevearc/dressing.nvim",
     event = "VeryLazy",
@@ -201,6 +207,8 @@ local Ui = {
       })
     end,
   },
+
+  -- Lualine
   lualine = {
     -- Set lualine as statusline
     "nvim-lualine/lualine.nvim",

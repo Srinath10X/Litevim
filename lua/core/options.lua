@@ -12,7 +12,7 @@ set_opts({
   laststatus = 3, -- status line
   ignorecase = true, -- for non-case-sensitive search
   smartcase = true, -- for upper-case search
-  hlsearch = false, -- false highlighting on search
+  hlsearch = true, -- true highlighting on search
   cursorline = true, -- enable's the cursor line
   termguicolors = true, -- use's terminal gui color's
   background = "dark", -- for dark background
@@ -23,10 +23,12 @@ set_opts({
   backup = false, -- to not take backup
   writebackup = false, -- to not write a backup file
   swapfile = false, -- not to save the file in swap
-  scrolloff = 8, -- scroll before 8 line
+  scrolloff = 10, -- scroll before 8 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
   conceallevel = 2, -- requried for obsidian
+  breakindent = true, -- enable break indent
+  undofile = true, -- enable to undo which you have worked on
 }, false)
 
 -- Global Options
