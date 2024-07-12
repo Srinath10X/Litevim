@@ -93,7 +93,7 @@ map("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>")
 map("i", "<C-S>", "<Cmd>w!<CR>") -- to save the file
 
 if vim.g.neovide == true then
-	map("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>") -- to zoom in neovide
-	map("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>") -- to zoom out in neovide
-	map("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>") -- ctrl+0 to default
+  map("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>") -- to zoom in neovide
+  map("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>") -- to zoom out in neovide
+  map("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>") -- ctrl+0 to default
 end
