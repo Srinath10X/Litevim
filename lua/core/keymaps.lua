@@ -43,9 +43,6 @@ map("n", "<leader>sm", "<Cmd>MaximizerToggle<CR>")
 -- Commenting
 map("n", "<leader>/", "gcc")
 
--- Nvim Tree
-map("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
-
 -- Resize
 map("n", "<leader>[", "<Cmd>vertical resize +1<CR>")
 map("n", "<leader>]", "<Cmd>vertical resize -1<CR>")

@@ -82,7 +82,7 @@ local M = {
     },
     cmd = "Neotree",
     keys = {
-      { "<c-n>", ":Neotree reveal<CR>", { desc = "NeoTree reveal" } },
+      { "<leader>e", ":Neotree reveal<CR>", { desc = "NeoTree reveal" } },
     },
     opts = {
       default_component_configs = {
@@ -101,7 +101,7 @@ local M = {
         window = {
           width = 30,
           mappings = {
-            ["<c-n>"] = "close_window",
+            ["<leader>e"] = "close_window",
           },
         },
       },
