@@ -28,10 +28,14 @@ local M = {
   toggle_term = {
     "akinsho/toggleterm.nvim",
     cmd = { "ToggleTerm" },
-    keys = { "<c-t>", "<cmd>ToggleTerm<cr>" },
+    keys = {
+      { "<c-t>", "<cmd>ToggleTerm direction=float<cr>" },
+      { "<leader>h", "<cmd>ToggleTerm direction=horizontal dir=./<cr>" },
+    },
     opts = {
-      open_mapping = [[<c-t>]],
       direction = "float",
+      shade_terminals = false,
+      close_on_exit = true,
       float_opts = {
         border = "curved",
         winblend = 0,

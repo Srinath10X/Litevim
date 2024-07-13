@@ -15,8 +15,10 @@ map("n", "gT", "<Cmd>bp<CR>") -- previous buffer
 map("n", "gx", "<Cmd>bdelete!<CR>") -- buffer delete
 
 -- Toggle terminal
-map("n", "<c-t>", "<Cmd>ToggleTerm direction=float<CR>") -- floating terminal
-map("t", "<c-t>", "<Cmd>ToggleTerm direction=float<CR>") -- floating terminal
+map("n", "<c-t>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal
+map("t", "<c-t>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal
+map("n", "<leader>h", "<Cmd>ToggleTerm direction=horizontal<CR>")
+map("t", "<leader>h", "<Cmd>ToggleTerm direction=horizontal<CR>")
 map("t", "<esc>", [[<C-\><C-n>]])
 map("t", "fj", [[<C-\><C-n>]])
 map("t", "<C-h>", [[<C-\><C-n><C-W>h]])
