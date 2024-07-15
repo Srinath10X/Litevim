@@ -55,14 +55,13 @@ local M = {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-      -- :help lspconfig-all
-      local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+      -- Manual server configuration
+      local lspconfig = require("lspconfig")
+      local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        lua_ls = {
+      local manualServers = {
+        ["lua_ls"] = {
+          default_capabilities = default_capabilities,
           settings = {
             Lua = {
               diagnostics = { globals = { "vim" } },
@@ -75,6 +74,18 @@ local M = {
             },
           },
         },
+      }
+
+      for server, config in pairs(manualServers) do
+        lspconfig[server].setup(config)
+      end
+
+      -- :help lspconfig-all
+      local servers = {
+        -- clangd = {},
+        -- gopls = {},
+        -- pyright = {},
+        -- rust_analyzer = {},
       }
 
       require("mason").setup()
@@ -212,10 +223,9 @@ local M = {
       cmp.setup({
         snippet = {
           expand = function(args)
-            luasnip.lsp_expand(args.body)
+            luasnip.lsp_expand(args.body) -- For `luasnip` users.
           end,
         },
-        completion = { completeopt = "menu,menuone,noinsert" },
         mapping = {
           ["<C-k>"] = cmp.mapping.select_prev_item(),
           ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -259,7 +269,6 @@ local M = {
             "s",
           }),
         },
-
         formatting = {
           fields = { "abbr", "kind", "menu" },
           format = function(entry, vim_item)
@@ -282,12 +291,15 @@ local M = {
             return vim_item
           end,
         },
-
         sources = {
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
+        },
+        confirm_opts = {
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = false,
         },
         window = {
           completion = {
@@ -298,6 +310,10 @@ local M = {
             border = "rounded",
             winhighlight = "Normal:CmpNormal",
           },
+        },
+        experimental = {
+          ghost_text = false,
+          native_menu = false,
         },
       })
     end,
