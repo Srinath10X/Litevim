@@ -9,7 +9,6 @@ local LspConfig = {
       "hrsh7th/cmp-buffer", -- buffer completions
       "hrsh7th/cmp-path", -- path completions
       "rafamadriz/friendly-snippets", -- friendly snippets
-      "onsails/lspkind.nvim", -- vs code like icons
     },
   },
 
@@ -35,7 +34,6 @@ local LspConfig = {
       config = function()
         require("mason-lspconfig").setup({
           ensure_installed = {
-            "lua_ls",
             "html",
             "cssls",
             "tsserver",
