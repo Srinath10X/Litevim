@@ -30,12 +30,12 @@ local M = {
     version = "*",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "nvim-tree/nvim-web-devicons", -- recommended but you can ignore this
       "MunifTanjim/nui.nvim",
     },
     cmd = "Neotree",
     keys = {
-      { "<leader>e", ":Neotree reveal<CR>", { desc = "NeoTree reveal" } },
+      { "<leader>e", ":Neotree toggle dir=./ <CR>",silent = true, { desc = "NeoTree reveal" } },
     },
     opts = {
       default_component_configs = {

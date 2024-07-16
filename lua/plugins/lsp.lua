@@ -283,7 +283,7 @@ local M = {
             })[entry.source.name]
 
             -- Add spaces to the left of kind
-            local space_padding = string.rep(" ", 4) -- 4 spaces as an example
+            local space_padding = string.rep(" ", 2) -- 4 spaces as an example
             vim_item.kind = space_padding .. kind
             vim_item.abbr = abbr
             vim_item.menu = menu
