@@ -60,6 +60,33 @@ local M = {
       local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local manualServers = {
+        ["clangd"] = {
+          capabilities = capabilities,
+          filetypes = { "c", "cpp" },
+        },
+        ["nil_ls"] = { capabilities = capabilities },
+        ["pylsp"] = { capabilities = capabilities },
+        ["gopls"] = {
+          capabilities = capabilities,
+          cmd = { "gopls" },
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              staticcheck = true,
+            },
+          },
+        },
+        ["rust_analyzer"] = {
+          capabilities = capabilities,
+          cmd = {
+            "rustup",
+            "run",
+            "stable",
+            "rust-analyzer",
+          },
+        },
         ["lua_ls"] = {
           default_capabilities = default_capabilities,
           settings = {
@@ -92,7 +119,7 @@ local M = {
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        "stylua", -- Used to format Lua code
+        -- "stylua", -- Used to format Lua code
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

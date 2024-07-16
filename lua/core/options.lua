@@ -7,6 +7,8 @@ set_opts({
   number = true, -- enables number lines
   relativenumber = true, -- enables relativenumber lines
   tabstop = 2, -- 2 spaces for tab-key
+	autoindent = true, -- autoindent easily
+	smartindent = true, -- smartindent 
   shiftwidth = 2, -- 2 spaces for indentation
   wrap = true, -- wrap the line
   laststatus = 3, -- status line
