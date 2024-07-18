@@ -153,8 +153,8 @@ local M = {
                 right_padding = 1,
               },
             },
-            lualine_b = { "filename" },
-            lualine_c = { "branch" },
+            lualine_b = { "filename", "branch" },
+            lualine_c = {},
             lualine_x = { diagnostics },
             lualine_y = {
               { "filetype" },
