@@ -119,7 +119,7 @@ local M = {
           normal = {
             a = { fg = colors.black, bg = colors.blue, gui = "bold" },
             b = { fg = colors.white, bg = colors.grey, gui = "bold" },
-            c = { fg = colors.black, bg = colors.black, gui = "bold" },
+            c = { fg = colors.white, bg = colors.black, gui = "bold" },
           },
 
           insert = { a = { fg = colors.black, bg = colors.violet, gui = "bold" } },
@@ -138,9 +138,7 @@ local M = {
           options = {
             theme = bubbles_theme,
             component_separators = { left = "", right = "" },
-            section_separators = { left = "", right = "" },
-            -- component_separators = { left = "", right = "" },
-            -- section_separators = { left = "", right = "" },
+            section_separators = { left = "", right = "" },
             disabled_filetypes = { "alpha" },
           },
 
@@ -149,12 +147,12 @@ local M = {
               {
                 icon = "",
                 "mode",
-                separator = { left = "", right = "" },
+                separator = { left = "", right = "" },
                 right_padding = 1,
               },
             },
-            lualine_b = { "filename", "branch" },
-            lualine_c = {},
+            lualine_b = { "filename" },
+            lualine_c = { "branch" },
             lualine_x = { diagnostics },
             lualine_y = {
               { "filetype" },
@@ -163,7 +161,7 @@ local M = {
               {
                 "progress",
                 icon = "󰦨",
-                separator = { right = "" },
+                separator = { left = "", right = "" },
               },
             },
           },
