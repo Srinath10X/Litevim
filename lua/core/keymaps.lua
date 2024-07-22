@@ -1,4 +1,6 @@
-local map = vim.keymap.set
+-- importing map core utils
+local utils = require("core.utils")
+local map = utils.map
 
 -- General keymaps
 map("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as <esc>

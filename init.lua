@@ -9,12 +9,11 @@ end
 
 -- modules here
 local modules = {
-  "core.options", -- options
-  "core.keymaps", -- keymaps
-  "lite", -- lazy
+  core = {
+    "options",
+    "keymaps",
+  },
+  lazy = "lite",
 }
 
--- loopover to require modules
-for _, module in ipairs(modules) do
-  utils.safe_require(module)
-end
+utils.requireModules(modules)
