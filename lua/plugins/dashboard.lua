@@ -8,7 +8,14 @@ local Dashboard = {
     -- Function to toggle statusline visibility
     local function toggle_statusline()
       local buftype = vim.bo.filetype
-      if buftype == "alpha" or buftype == "lazy" or buftype == "mason" then
+      if
+        buftype == "alpha"
+        or buftype == "lazy"
+        or buftype == "mason"
+        or buftype == "neo-tree"
+        or buftype == "toggleterm"
+        or buftype == "TelescopePrompt"
+      then
         vim.o.laststatus = 0 -- Hide statusline
         vim.o.ruler = false -- Hide ruler
         vim.o.showcmd = false -- Hide command
@@ -53,7 +60,7 @@ local Dashboard = {
 
     dashboard.section.footer.val = {
       "",
-      "Litevim-rewrite v0.1",
+      "Litevim v0.4.0",
       "",
     }
 

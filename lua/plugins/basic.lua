@@ -30,7 +30,6 @@ local M = {
     cmd = { "ToggleTerm" },
     keys = {
       { "<c-t>", "<cmd>ToggleTerm direction=float<cr>" },
-      { "<leader>h", "<cmd>ToggleTerm direction=horizontal dir=./<cr>" },
     },
     opts = {
       direction = "float",

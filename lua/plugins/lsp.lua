@@ -64,6 +64,10 @@ local M = {
           capabilities = capabilities,
           filetypes = { "c", "cpp" },
         },
+        ["java_language_server"] = {
+          capabilities = capabilities,
+          filetypes = "java",
+        },
         ["nil_ls"] = { capabilities = capabilities },
         ["pylsp"] = { capabilities = capabilities },
         ["gopls"] = {

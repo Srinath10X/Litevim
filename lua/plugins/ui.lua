@@ -100,8 +100,8 @@ local M = {
         local diagnostics = {
           "diagnostics",
           sections = { "error", "warn" },
-          colored = true, -- Displays diagnostics status in color if set to true.
-          always_visible = true, -- Show diagnostics even if there are none.
+          colored = true, -- Displays diagnostics in color.
+          always_visible = true,
         }
 
         local colors = {
@@ -137,8 +137,6 @@ local M = {
         require("lualine").setup({
           options = {
             theme = bubbles_theme,
-            component_separators = { left = "", right = "" },
-            section_separators = { left = "", right = "" },
             disabled_filetypes = { "alpha" },
           },
 
@@ -147,7 +145,6 @@ local M = {
               {
                 icon = "",
                 "mode",
-                separator = { left = "", right = "" },
                 right_padding = 1,
               },
             },
@@ -161,7 +158,6 @@ local M = {
               {
                 "progress",
                 icon = "󰦨",
-                separator = { left = "", right = "" },
               },
             },
           },

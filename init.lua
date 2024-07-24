@@ -1,5 +1,7 @@
 -- importing core utils from the core
 local status_ok, utils = pcall(require, "core.utils")
+
+-- if the core utils is failed to load it will return this error
 if not status_ok then
   vim.api.nvim_echo({
     { "Unable to import utils", "\nError: " },
@@ -7,7 +9,7 @@ if not status_ok then
   return nil
 end
 
--- modules here
+-- import modules here
 local modules = {
   core = {
     "options",

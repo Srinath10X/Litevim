@@ -28,7 +28,6 @@ set_opts({
   scrolloff = 10, -- scroll before 8 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
-  conceallevel = 3, -- requried for obsidian
   breakindent = true, -- enable break indent
   undofile = true, -- enable to undo which you have worked on
   updatetime = 250,
@@ -53,3 +52,14 @@ set_opts({
   neovide_padding_right = 15,
   neovide_padding_left = 15,
 }, true)
+
+vim.api.nvim_create_augroup("markdown_settings", { clear = true })
+
+-- autocmd for Markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  group = "markdown_settings",
+  pattern = "markdown",
+  callback = function()
+    vim.opt.conceallevel = 3
+  end,
+})
