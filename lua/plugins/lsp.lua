@@ -54,45 +54,9 @@ local M = {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-
-      -- Manual server configuration
-      local lspconfig = require("lspconfig")
-      local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      local manualServers = {
-        ["clangd"] = {
-          capabilities = capabilities,
-          filetypes = { "c", "cpp" },
-        },
-        ["java_language_server"] = {
-          capabilities = capabilities,
-          filetypes = "java",
-        },
-        ["nil_ls"] = { capabilities = capabilities },
-        ["pylsp"] = { capabilities = capabilities },
-        ["gopls"] = {
-          capabilities = capabilities,
-          cmd = { "gopls" },
-          settings = {
-            gopls = {
-              analyses = {
-                unusedparams = true,
-              },
-              staticcheck = true,
-            },
-          },
-        },
-        ["rust_analyzer"] = {
-          capabilities = capabilities,
-          cmd = {
-            "rustup",
-            "run",
-            "stable",
-            "rust-analyzer",
-          },
-        },
-        ["lua_ls"] = {
-          default_capabilities = default_capabilities,
+      -- :help lspconfig-all
+      local servers = {
+        lua_ls = {
           settings = {
             Lua = {
               diagnostics = { globals = { "vim" } },
@@ -105,15 +69,10 @@ local M = {
             },
           },
         },
-      }
-
-      for server, config in pairs(manualServers) do
-        lspconfig[server].setup(config)
-      end
-
-      -- :help lspconfig-all
-      local servers = {
-        -- clangd = {},
+        -- jdtls = {},
+        -- clangd = {
+        --  filetypes = { "c", "cpp" },
+        -- },
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -156,7 +115,7 @@ local M = {
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = { c = false, cpp = false }
         return {
           timeout_ms = 500,
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
@@ -178,6 +137,7 @@ local M = {
         lua = { "stylua" },
         python = { "isort", "black" },
         c = { "clangd" },
+        cpp = { "clangd" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
       },

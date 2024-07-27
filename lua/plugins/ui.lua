@@ -137,7 +137,7 @@ local M = {
         require("lualine").setup({
           options = {
             theme = bubbles_theme,
-            disabled_filetypes = { "alpha" },
+            disabled_filetypes = { "alpha", "neo-tree" },
           },
 
           sections = {
