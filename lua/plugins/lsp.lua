@@ -17,10 +17,9 @@ local M = {
           },
         },
       },
-      "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-      -- { "j-hui/fidget.nvim", opts = {} },
-      -- { "folke/neodev.nvim", opts = {} },
+      { "williamboman/mason-lspconfig.nvim" },
+      { "WhoIsSethDaniel/mason-tool-installer.nvim" },
+      { "j-hui/fidget.nvim", event = { "BufNewFile", "BufReadPre" }, opts = {} },
     },
     config = function()
       vim.api.nvim_create_autocmd("LspAttach", {
@@ -82,7 +81,7 @@ local M = {
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        -- "stylua", -- Used to format Lua code
+        "stylua", -- Used to format Lua code
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -115,7 +114,11 @@ local M = {
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        local disable_filetypes = { c = false, cpp = false }
+        local disable_filetypes = {
+          c = false,
+          cpp = false,
+          markdown = true,
+        }
         return {
           timeout_ms = 500,
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],

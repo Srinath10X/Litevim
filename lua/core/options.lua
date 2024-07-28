@@ -60,6 +60,6 @@ vim.api.nvim_create_autocmd("FileType", {
   group = "markdown_settings",
   pattern = "markdown",
   callback = function()
-    vim.opt.conceallevel = 3
+    vim.opt.conceallevel = 1
   end,
 })

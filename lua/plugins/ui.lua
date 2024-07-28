@@ -236,6 +236,42 @@ local M = {
       })
     end,
   },
+
+  markdown = {
+    "MeanderingProgrammer/markdown.nvim",
+    main = "render-markdown",
+    opts = {
+      heading = {
+        enabled = false,
+        sign = false,
+      },
+      checkbox = {
+        enabled = true,
+        unchecked = {
+          icon = "󰄱 ",
+          highlight = "RenderMarkdownUnchecked",
+        },
+        checked = {
+          icon = " ",
+          highlight = "RenderMarkdownChecked",
+        },
+        custom = {
+          todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo" },
+        },
+      },
+      code = {
+        enabled = true,
+        sign = false,
+        style = "normal",
+        left_pad = 2,
+        right_pad = 3,
+        width = "block",
+        border = "thin",
+        above = "▄",
+        below = "▀",
+      },
+    },
+  },
 }
 
 return {
@@ -247,4 +283,5 @@ return {
   M.gitsigns,
   M.lspsaga,
   M.treesitter,
+  M.markdown,
 }
