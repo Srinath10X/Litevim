@@ -3,6 +3,7 @@ local M = {
 
   { -- LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
+    event = { "BufNewFile", "BufReadPre" },
     dependencies = {
       {
         "williamboman/mason.nvim",
@@ -19,7 +20,6 @@ local M = {
       },
       { "williamboman/mason-lspconfig.nvim" },
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
-      { "j-hui/fidget.nvim", event = { "BufNewFile", "BufReadPre" }, opts = {} },
     },
     config = function()
       vim.api.nvim_create_autocmd("LspAttach", {
@@ -114,15 +114,18 @@ local M = {
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        local disable_filetypes = {
-          c = false,
-          cpp = false,
-          markdown = true,
-        }
-        return {
-          timeout_ms = 500,
-          lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-        }
+        local ignore_filetypes = { "markdown" }
+        if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+          return
+        end
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+          return
+        end
+        local bufname = vim.api.nvim_buf_get_name(bufnr)
+        if bufname:match("/node_modules/") then
+          return
+        end
+        return { timeout_ms = 500, lsp_format = "fallback" }
       end,
       formatters_by_ft = {
         javascript = { "prettier", "prettierd" },

@@ -91,7 +91,8 @@ local M = {
     {
       -- Set lualine as statusline
       "nvim-lualine/lualine.nvim",
-      event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+      -- event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+      event = { "VeryLazy" }, -- to disable, comment this out
       -- See `:help lualine.txt`
       dependencies = {
         "nvim-tree/nvim-web-devicons",
@@ -202,6 +203,7 @@ local M = {
 
   treesitter = {
     "nvim-treesitter/nvim-treesitter",
+    event = { "VeryLazy" },
     config = function()
       require("nvim-treesitter.configs").setup({
         -- enable syntax highlighting
@@ -240,6 +242,7 @@ local M = {
   markdown = {
     "MeanderingProgrammer/markdown.nvim",
     main = "render-markdown",
+    ft = "markdown",
     opts = {
       heading = {
         enabled = false,
@@ -272,6 +275,28 @@ local M = {
       },
     },
   },
+
+  noice = {
+    {
+      "folke/noice.nvim",
+      event = "VeryLazy",
+      opts = {},
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        {
+          "rcarriga/nvim-notify",
+          opts = {
+            timeout = 100,
+          },
+        },
+      },
+    },
+  },
+
+  ccc = {
+    "uga-rosa/ccc.nvim",
+    opts = {},
+  },
 }
 
 return {
@@ -284,4 +309,6 @@ return {
   M.lspsaga,
   M.treesitter,
   M.markdown,
+  M.noice,
+  M.ccc,
 }
