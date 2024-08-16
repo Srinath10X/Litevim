@@ -51,6 +51,35 @@ local M = {
         end,
       })
 
+      local lspconfig = require("lspconfig")
+      local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      -- Define all of your local_servers in this table
+      local local_servers = {
+        lua_ls = {
+          capabilities = default_capabilities,
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } },
+              workspace = {
+                library = {
+                  [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                  [vim.fn.stdpath("config") .. "/lua"] = true,
+                },
+              },
+            },
+          },
+        },
+        -- clangd = {},
+        -- gopls = {},
+        -- pyright = {},
+        -- rust_analyzer = {},
+      }
+
+      for server, config in pairs(local_servers) do
+        lspconfig[server].setup(config)
+      end
+
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
       -- :help lspconfig-all
