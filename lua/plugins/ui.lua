@@ -283,19 +283,18 @@ local M = {
       opts = {},
       dependencies = {
         "MunifTanjim/nui.nvim",
-        {
-          "rcarriga/nvim-notify",
-          opts = {
-            timeout = 100,
-          },
-        },
       },
     },
   },
 
   ccc = {
     "uga-rosa/ccc.nvim",
-    opts = {},
+    opts = {
+      highlighter = {
+        auto_enable = true,
+        lsp = true,
+      },
+    },
   },
 }
 
