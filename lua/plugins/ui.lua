@@ -287,15 +287,7 @@ local M = {
     },
   },
 
-  ccc = {
-    "uga-rosa/ccc.nvim",
-    opts = {
-      highlighter = {
-        auto_enable = true,
-        lsp = true,
-      },
-    },
-  },
+  colors = { "brenoprata10/nvim-highlight-colors", opts = {} },
 }
 
 return {
@@ -309,5 +301,5 @@ return {
   M.treesitter,
   M.markdown,
   M.noice,
-  M.ccc,
+  M.colors,
 }
