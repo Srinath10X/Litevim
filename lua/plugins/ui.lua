@@ -287,7 +287,10 @@ local M = {
     },
   },
 
-  colors = { "brenoprata10/nvim-highlight-colors", opts = {} },
+  color_highlighter = {
+    "brenoprata10/nvim-highlight-colors",
+    opts = {},
+  },
 }
 
 return {
@@ -301,5 +304,5 @@ return {
   M.treesitter,
   M.markdown,
   M.noice,
-  M.colors,
+  M.color_highlighter,
 }
