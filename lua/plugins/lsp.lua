@@ -54,6 +54,25 @@ local M = {
       local lspconfig = require("lspconfig")
       local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      -- dart lspconfig
+      lspconfig.dartls.setup({
+        cmd = { "dart", "language-server", "--protocol=lsp" },
+        filetypes = { "dart" },
+        init_options = {
+          closingLabels = true,
+          flutterOutline = true,
+          onlyAnalyzeProjectsWithOpenFiles = true,
+          outline = true,
+          suggestFromUnimportedLibraries = true,
+        },
+        settings = {
+          dart = {
+            completeFunctionCalls = true,
+            showTodos = true,
+          },
+        },
+      })
+
       -- Define all of your local_servers in this table
       local local_servers = {
         lua_ls = {
@@ -70,6 +89,8 @@ local M = {
             },
           },
         },
+
+        dartls = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -84,19 +105,20 @@ local M = {
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
       -- :help lspconfig-all
       local servers = {
-        lua_ls = {
-          settings = {
-            Lua = {
-              diagnostics = { globals = { "vim" } },
-              workspace = {
-                library = {
-                  [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                  [vim.fn.stdpath("config") .. "/lua"] = true,
-                },
-              },
-            },
-          },
-        },
+        -- lua_ls = {
+        --   settings = {
+        --     Lua = {
+        --       diagnostics = { globals = { "vim" } },
+        --       workspace = {
+        --         library = {
+        --           [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+        --           [vim.fn.stdpath("config") .. "/lua"] = true,
+        --         },
+        --       },
+        --     },
+        --   },
+        -- },
+
         -- jdtls = {},
         -- clangd = {
         --  filetypes = { "c", "cpp" },

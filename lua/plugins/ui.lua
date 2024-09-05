@@ -28,6 +28,7 @@ local M = {
   neo_tree = {
     "nvim-neo-tree/neo-tree.nvim",
     version = "*",
+    event = { "VeryLazy" },
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- recommended but you can ignore this
