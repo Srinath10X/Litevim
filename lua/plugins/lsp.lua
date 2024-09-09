@@ -105,19 +105,19 @@ local M = {
       capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
       -- :help lspconfig-all
       local servers = {
-        -- lua_ls = {
-        --   settings = {
-        --     Lua = {
-        --       diagnostics = { globals = { "vim" } },
-        --       workspace = {
-        --         library = {
-        --           [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-        --           [vim.fn.stdpath("config") .. "/lua"] = true,
-        --         },
-        --       },
-        --     },
-        --   },
-        -- },
+        lua_ls = {
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } },
+              workspace = {
+                library = {
+                  [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                  [vim.fn.stdpath("config") .. "/lua"] = true,
+                },
+              },
+            },
+          },
+        },
 
         -- jdtls = {},
         -- clangd = {
