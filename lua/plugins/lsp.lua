@@ -3,7 +3,8 @@ local M = {
 
   { -- LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
-    event = { "BufNewFile", "BufReadPre" },
+    -- event = { "BufNewFile", "BufReadPre" },
+    event = { "VeryLazy" },
     dependencies = {
       {
         "williamboman/mason.nvim",
@@ -118,13 +119,19 @@ local M = {
             },
           },
         },
-
-        -- jdtls = {},
         -- clangd = {
         --  filetypes = { "c", "cpp" },
         -- },
+
+        -- jdtls = {
+        -- 	filetypes = { "java" },
+        -- },
+        -- kotlin_language_server = {},
+
         -- gopls = {},
+
         -- pyright = {},
+
         -- rust_analyzer = {},
       }
 
