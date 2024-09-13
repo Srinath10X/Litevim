@@ -3,8 +3,7 @@ local M = {
 
   { -- LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
-    -- event = { "BufNewFile", "BufReadPre" },
-    event = { "VeryLazy" },
+    cmd = "Mason",
     dependencies = {
       {
         "williamboman/mason.nvim",
