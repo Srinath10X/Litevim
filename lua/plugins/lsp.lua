@@ -204,6 +204,7 @@ local M = {
         cpp = { "clangd" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
+        dart = { "dartls", "dcm", "ast_grep" },
       },
     },
   },

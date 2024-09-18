@@ -14,6 +14,7 @@ local modules = {
   core = {
     "options",
     "keymaps",
+    "snippets",
   },
   lazy = "lite",
 }
