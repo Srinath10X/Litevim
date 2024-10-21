@@ -3,9 +3,8 @@
 **Litevim 🚀**: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
 
 ## Showcase
-
-![Showcase1](./.github/assets/showcase-1.png)
-![Showcase2](./.github/assets/showcase-2.png)
+![Showcase1](https://i.imgur.com/vQrO1iM.png)
+![Showcase2](https://i.imgur.com/E2gPTU9.png)
 
 ## Table of Contents
 
