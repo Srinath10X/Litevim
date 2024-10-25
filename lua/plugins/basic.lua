@@ -58,6 +58,16 @@ local M = {
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
     end,
   },
+
+  markdown = {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
 }
 
 return {
@@ -65,4 +75,5 @@ return {
   M.comment,
   M.toggle_term,
   M.autopairs,
+  M.markdown,
 }
