@@ -39,10 +39,6 @@ map("n", "<leader>tx", "<Cmd>tabclose<CR>") -- close current tab
 map("n", "<leader>tn", "<Cmd>tabn<CR>") -- go to next tab
 map("n", "<leader>tp", "<Cmd>tabp<CR>") -- go to previous tab
 
--- Plugin keymaps
--- Window maximizer
-map("n", "<leader>sm", "<Cmd>MaximizerToggle<CR>")
-
 -- Commenting
 map("n", "<leader>/", "gcc")
 

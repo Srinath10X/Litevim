@@ -63,3 +63,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 1 -- required for markdown.nvim
   end,
 })
+
+vim.api.nvim_create_user_command("Hterm", function()
+  vim.cmd("split | terminal")
+  vim.cmd("resize -5")
+
+  -- Disable number and relativenumber for the terminal buffer
+  vim.opt_local.number = false
+  vim.opt_local.relativenumber = false
+
+  -- Enter insert mode
+  vim.cmd("startinsert")
+
+  -- Map Ctrl + D to close the terminal without confirmation
+  vim.api.nvim_buf_set_keymap(0, "t", "<C-d>", "<C-\\><C-n>:bd!<CR>", { noremap = true, silent = true })
+end, {})
