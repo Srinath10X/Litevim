@@ -53,7 +53,7 @@ local Dashboard = {
 
     dashboard.section.footer.val = {
       "",
-      "Litevim v0.4.3",
+      "Litevim v0.4.4",
       "",
     }
 
