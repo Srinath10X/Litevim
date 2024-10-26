@@ -216,7 +216,7 @@ local M = {
 
   treesitter = {
     "nvim-treesitter/nvim-treesitter",
-    event = { "VeryLazy" },
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("nvim-treesitter.configs").setup({
         -- enable syntax highlighting

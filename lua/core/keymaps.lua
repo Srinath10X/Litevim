@@ -5,7 +5,8 @@ local map = utils.map
 -- General keymaps
 map("i", "fj", "<ESC>") -- i to go to into insert mode and fj is same as <esc>
 map("n", "<leader>nh", "<Cmd>nohl<CR>") -- to clear search space+h
-map("i", "<C-BS>", "<C-W>")
+map("i", "<C-BS>", "<C-W>") -- to delete one word
+map("n", ";", ":") -- to enter into command mode
 
 -- Increment/decrement numbers
 map("n", "<leader>+", "<C-a>") -- increment
@@ -90,6 +91,7 @@ map("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>")
 map("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>")
 
 map("i", "<C-S>", "<Cmd>w!<CR>") -- to save the file
+map("n", "<leader>tt", "<Cmd>ToggleTgpt<CR>")
 
 if vim.g.neovide == true then
   map("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>") -- to zoom in neovide
