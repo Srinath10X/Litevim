@@ -348,7 +348,7 @@ local M = {
           end,
         },
         sources = {
-          { name = "nvim_lsp" },
+          { name = "nvim_lsp", max_item_count = 100 },
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
