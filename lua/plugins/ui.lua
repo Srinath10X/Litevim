@@ -3,9 +3,15 @@ local M = {
   catppuccin = {
     "catppuccin/nvim",
     name = "catppuccin",
+  },
+
+  -- decay colorscheme
+  decay = {
+    "decaycs/decay.nvim",
+    name = "decay",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("decay")
     end,
   },
 
@@ -118,15 +124,26 @@ local M = {
           always_visible = true,
         }
 
+        -- catppuccin
+        -- local colors = {
+        --   blue = "#80a0ff",
+        --   cyan = "#79dac8",
+        --   black = "#1E1E2E",
+        --   white = "#c6c6c6",
+        --   red = "#ff5189",
+        --   violet = "#d183e8",
+        --   grey = "#303030",
+        --   yellow = "#f5bf42",
+        -- }
+
         local colors = {
           blue = "#80a0ff",
-          cyan = "#79dac8",
-          black = "#1E1E2E", -- catppuccin
-          white = "#c6c6c6",
-          red = "#ff5189",
-          violet = "#d183e8",
+          black = "#171B20",
+          white = "#b6beca",
+          red = "#e05f65",
+          violet = "#c68aee",
           grey = "#303030",
-          yellow = "#f5bf42",
+          yellow = "#f1cf8a",
         }
 
         local bubbles_theme = {
@@ -318,4 +335,5 @@ return {
   M.markdown,
   M.noice,
   M.color_highlighter,
+  M.decay,
 }
