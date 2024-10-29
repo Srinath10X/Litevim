@@ -60,7 +60,7 @@ git clone https://github.com/Srinath10X/Litevim.git ~/.config/nvim --depth 1 && 
 git clone https://github.com/Srinath10X/Litevim.git %USERPROFILE%\AppData\Local\nvim --depth 1 && nvim
 ```
 
-- And for PowerShell aka `pwsh` you cam use the following command 
+- And for PowerShell aka `pwsh` you can use the following command 
 
 ```bash
 git clone https://github.com/Srinath10X/Litevim.git $ENV:USERPROFILE\AppData\Local\nvim && nvim
