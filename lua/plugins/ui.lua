@@ -3,16 +3,16 @@ local M = {
   catppuccin = {
     "catppuccin/nvim",
     name = "catppuccin",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("catppuccin")
+    end,
   },
 
   -- decay colorscheme
   decay = {
     "decaycs/decay.nvim",
     name = "decay",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme("decay")
-    end,
   },
 
   -- Gitsigns
@@ -125,26 +125,26 @@ local M = {
         }
 
         -- catppuccin
-        -- local colors = {
-        --   blue = "#80a0ff",
-        --   cyan = "#79dac8",
-        --   black = "#1E1E2E",
-        --   white = "#c6c6c6",
-        --   red = "#ff5189",
-        --   violet = "#d183e8",
-        --   grey = "#303030",
-        --   yellow = "#f5bf42",
-        -- }
-
         local colors = {
           blue = "#80a0ff",
-          black = "#171B20",
-          white = "#b6beca",
-          red = "#e05f65",
-          violet = "#c68aee",
+          cyan = "#79dac8",
+          black = "#1E1E2E",
+          white = "#c6c6c6",
+          red = "#ff5189",
+          violet = "#d183e8",
           grey = "#303030",
-          yellow = "#f1cf8a",
+          yellow = "#f5bf42",
         }
+
+        -- local colors = {
+        --   blue = "#80a0ff",
+        --   black = "#171B20",
+        --   white = "#b6beca",
+        --   red = "#e05f65",
+        --   violet = "#c68aee",
+        --   grey = "#303030",
+        --   yellow = "#f1cf8a",
+        -- }
 
         local bubbles_theme = {
           normal = {

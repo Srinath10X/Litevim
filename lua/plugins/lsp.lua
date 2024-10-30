@@ -326,23 +326,13 @@ local M = {
           }),
         },
         formatting = {
-          fields = { "abbr", "kind", "menu" },
+          fields = { "abbr", "kind" },
           format = function(entry, vim_item)
-            -- Kind icons
             local kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
             local abbr = vim_item.abbr
-            local menu = ({
-              nvim_lsp = "[LSP]",
-              luasnip = "[Snippet]",
-              buffer = "[Buffer]",
-              path = "[Path]",
-            })[entry.source.name]
-
-            -- Add spaces to the left of kind
-            local space_padding = string.rep(" ", 2) -- 4 spaces as an example
-            vim_item.kind = space_padding .. kind
+            local space_padding = string.rep(" ", 2)
             vim_item.abbr = abbr
-            vim_item.menu = menu
+            vim_item.kind = space_padding .. kind
 
             return vim_item
           end,
