@@ -1,4 +1,4 @@
-# Litevim v0.4.3 🌿
+# Litevim v0.4.4 🌿
 
 **Litevim 🚀**: A lightweight, easily configurable Neovim setup for a swift and clean editing experience. Tailor your themes 🎨, master languages 🚀, all in a user-friendly, minimalistic package.
 
@@ -44,7 +44,7 @@
 
 ### For Linux/Macos
 
-1. Clone the Litevim repository to your local machine:
+Clone the Litevim repository to your local machine: (make sure you have `git` installed)
 
 ```bash
 git clone https://github.com/Srinath10X/Litevim.git ~/.config/nvim --depth 1 && nvim
@@ -52,7 +52,7 @@ git clone https://github.com/Srinath10X/Litevim.git ~/.config/nvim --depth 1 && 
 
 ### For Windows
 
-1. Clone the Litevim repository to your local machine:
+Clone the Litevim repository to your local machine: (make sure you have `git` installed)
 
 - If you're using Command Prompt aka `CMD`
 
@@ -91,7 +91,7 @@ Contributions are welcome! If you have any ideas, improvements, or bug fixes, fe
 
 ## License 📝
 
-Litevim is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Litevim is licensed under the GPL3 License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments 🙏
 
