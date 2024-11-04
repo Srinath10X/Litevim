@@ -20,15 +20,6 @@ function M.set_opts(opts, is_global)
   end
 end
 
--- Helper function to set key mappings with default options
-function M.map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
 function M.requireModules(modules, prefix)
   local stack = { { modules = modules, prefix = prefix or "" } }
   while #stack > 0 do

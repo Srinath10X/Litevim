@@ -32,8 +32,8 @@ require("lazy").setup({
     notify = false,
   },
 
-  -- checks for any plugin updates
-  checker = { enabled = true },
+  -- checks for any plugin updates on startup
+  -- checker = { enabled = true },
 
   -- performance optimizations
   performance = {
