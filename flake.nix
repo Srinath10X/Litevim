@@ -1,15 +1,29 @@
 {
-  description = "A very basic flake";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-  };
+  outputs = { self, nixpkgs }:
+    let
+      pkgs = import nixpkgs { system = "x86_64-linux"; };
+    in
+    {
+      devShells.x86_64-linux.default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          neovim
+          ripgrep
+        ];
 
-  outputs = { self, nixpkgs }: {
+        shellHook = ''
+          ln -s "$(pwd)" "$HOME/.config/litevim"
+          echo "🎉 Welcome to your LiteVim dev shell! 🎉"
+          echo "⚡ Neovim and ripgrep are ready to go! ⚡"
+          echo "🚀 Syncing your plugins and preparing for an awesome coding session..."
+          nvim --headless +"Lazy! sync" +qa
+          echo "🌟 All set up! Get ready to code and enjoy your environment! 🌟"
+        '';
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
-  };
+        env = {
+          NVIM_APPNAME = "litevim";
+        };
+      };
+    };
 }
