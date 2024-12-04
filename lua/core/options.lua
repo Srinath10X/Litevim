@@ -25,7 +25,7 @@ set_opts({
   backup = false, -- to not take backup
   writebackup = false, -- to not write a backup file
   swapfile = false, -- not to save the file in swap
-  scrolloff = 10, -- scroll before 8 line
+  scrolloff = 10, -- scroll before 10 line
   clipboard = "unnamedplus", -- to copy something from neovim to the system clipboard
   fillchars = "eob: ", -- to remove tilder sign at the end of buffer "~"
   breakindent = true, -- enable break indent

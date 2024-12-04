@@ -29,7 +29,7 @@ local M = {
     "akinsho/toggleterm.nvim",
     cmd = { "ToggleTerm" },
     keys = {
-      { "<c-t>", "<cmd>ToggleTerm direction=float<cr>" },
+      { "<c-t>", "<cmd>ToggleTerm direction=float dir=.<cr>" },
     },
     opts = {
       direction = "float",

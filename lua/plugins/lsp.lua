@@ -91,11 +91,13 @@ local M = {
           },
         },
 
-        dartls = {},
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+        clangd = {
+          filetypes = { "c", "cpp" },
+        },
+
+        gopls = {},
+        pyright = {},
+        rust_analyzer = {},
       }
 
       for server, config in pairs(local_servers) do
