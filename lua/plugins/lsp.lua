@@ -91,6 +91,10 @@ local M = {
           },
         },
 
+        jdtls = {
+          filetypes = { "java" },
+        },
+
         clangd = {
           filetypes = { "c", "cpp" },
         },
