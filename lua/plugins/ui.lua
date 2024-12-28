@@ -321,6 +321,13 @@ local M = {
     "brenoprata10/nvim-highlight-colors",
     opts = {},
   },
+
+  mdx = {
+    "davidmh/mdx.nvim",
+    config = true,
+    ft = "markdown",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
 }
 
 return {
@@ -336,4 +343,5 @@ return {
   M.noice,
   M.color_highlighter,
   M.decay,
+  M.mdx,
 }
