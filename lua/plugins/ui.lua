@@ -317,15 +317,16 @@ local M = {
     },
   },
 
+  -- For color highlighting like this #DEDEDE
   color_highlighter = {
     "brenoprata10/nvim-highlight-colors",
     opts = {},
   },
 
+  -- For mdx highlighting
   mdx = {
     "davidmh/mdx.nvim",
     config = true,
-    ft = "markdown",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
 }
