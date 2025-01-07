@@ -326,6 +326,7 @@ local M = {
   -- For mdx highlighting
   mdx = {
     "davidmh/mdx.nvim",
+    event = "VeryLazy",
     config = true,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
