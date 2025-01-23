@@ -9,12 +9,6 @@ local M = {
     end,
   },
 
-  -- decay colorscheme
-  decay = {
-    "decaycs/decay.nvim",
-    name = "decay",
-  },
-
   -- Gitsigns
   gitsigns = {
     "lewis6991/gitsigns.nvim",
@@ -326,7 +320,7 @@ local M = {
   -- For mdx highlighting
   mdx = {
     "davidmh/mdx.nvim",
-    event = "VeryLazy",
+    event = { "BufEnter", "BufReadPre" },
     config = true,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
@@ -344,6 +338,5 @@ return {
   M.markdown,
   M.noice,
   M.color_highlighter,
-  M.decay,
   M.mdx,
 }
