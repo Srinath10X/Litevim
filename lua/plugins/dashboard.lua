@@ -10,9 +10,9 @@ local Dashboard = {
     local function toggle_statusline()
       local buftype = vim.bo.filetype
       if buftype == "alpha" or buftype == "lazy" or buftype == "mason" or buftype == "TelescopePrompt" then
-        vim.o.laststatus = 0 -- Hide statusline
         vim.o.ruler = false -- Hide ruler
         vim.o.showcmd = false -- Hide command
+        vim.o.laststatus = 0 -- Hide statusline
       else
         vim.o.laststatus = 3 -- Show statusline
       end
