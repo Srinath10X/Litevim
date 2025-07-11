@@ -42,7 +42,7 @@ vim.g.neovide_padding_left = 15
 
 -- autocmd for Markdown files
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
+	pattern = "markdown" or "mdx",
 	callback = function()
 		vim.opt.conceallevel = 1 -- required for markdown.nvim
 	end,
