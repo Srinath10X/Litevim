@@ -89,6 +89,10 @@ local M = {
 					},
 				},
 
+				vuels = {
+					filetypes = { "vue" },
+				},
+
 				jdtls = {
 					filetypes = { "java" },
 				},
@@ -190,7 +194,7 @@ local M = {
 				return { timeout_ms = 100, lsp_format = "fallback" }
 			end,
 			formatters_by_ft = {
-				javascript = { "prettier", "prettierd" },
+				javascript = { "biome", "prettierd", "prettier" },
 				typescript = { "prettier", "prettierd" },
 				javascriptreact = { "prettier", "prettierd" },
 				typescriptreact = { "prettier", "prettierd" },

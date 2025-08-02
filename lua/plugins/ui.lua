@@ -78,7 +78,7 @@ local M = {
 					hide_hidden = false, -- only works on Windows for hidden files/directories
 				},
 				window = {
-					-- width = 30,
+					width = 30,
 					mappings = {
 						["<leader>e"] = "close_window",
 					},
