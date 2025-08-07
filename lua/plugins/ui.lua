@@ -12,15 +12,6 @@ local M = {
 			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
-	-- catppuccin colorscheme
-	catppuccin = {
-		"catppuccin/nvim",
-		name = "catppuccin",
-		-- priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme("catppuccin")
-		-- end,
-	},
 
 	-- Gitsigns
 	gitsigns = {
@@ -78,7 +69,7 @@ local M = {
 					hide_hidden = false, -- only works on Windows for hidden files/directories
 				},
 				window = {
-					width = 30,
+					-- width = 30,
 					mappings = {
 						["<leader>e"] = "close_window",
 					},
@@ -328,7 +319,6 @@ local M = {
 }
 
 return {
-	M.catppuccin,
 	M.lualine,
 	M.bufferline,
 	M.neo_tree,
