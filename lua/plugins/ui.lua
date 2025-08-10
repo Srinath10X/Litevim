@@ -73,6 +73,7 @@ local M = {
 					mappings = {
 						["<leader>e"] = "close_window",
 					},
+					position = "right",
 				},
 			},
 		},
