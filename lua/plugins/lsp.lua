@@ -191,10 +191,10 @@ local M = {
 				if bufname:match("/node_modules/") then
 					return
 				end
-				return { timeout_ms = 100, lsp_format = "fallback" }
+				return { timeout_ms = 700, lsp_format = "fallback" }
 			end,
 			formatters_by_ft = {
-				javascript = { "biome", "prettierd", "prettier" },
+				javascript = { "prettier", "prettierd" },
 				typescript = { "prettier", "prettierd" },
 				javascriptreact = { "prettier", "prettierd" },
 				typescriptreact = { "prettier", "prettierd" },

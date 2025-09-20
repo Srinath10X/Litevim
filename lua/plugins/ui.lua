@@ -5,7 +5,7 @@ local M = {
 		config = function()
 			require("tokyonight").setup({
 				styles = {
-					comments = { italic = true },
+					comments = { italic = false },
 				},
 			})
 
