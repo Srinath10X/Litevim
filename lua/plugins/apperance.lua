@@ -4,7 +4,7 @@ local M = {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 
@@ -33,9 +33,6 @@ local M = {
 		opts = {},
 		main = "ibl",
 		event = { "BufReadPost", "BufNewFile" },
-		dependencies = {
-			{ "echasnovski/mini.indentscope", opts = { symbol = "│" } },
-		},
 	},
 
 	lualine = {
@@ -177,7 +174,6 @@ local M = {
 					"dockerfile",
 					"gitignore",
 				},
-				-- auto install above language parsers
 				auto_install = true,
 			})
 		end,
