@@ -18,7 +18,7 @@ map("t", "<C-h>", [[<C-\><C-n><C-W>h]])
 map("t", "<C-j>", [[<C-\><C-n><C-W>j]])
 map("t", "<C-k>", [[<C-\><C-n><C-W>k]])
 map("t", "<C-l>", [[<C-\><C-n><C-W>l]])
-map({"n", "t" } , "<c-t>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal
+map({ "n", "t" }, "<c-t>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal
 
 -- Window management
 map("n", "<leader>sv", "<C-w>v")         -- split window vertically

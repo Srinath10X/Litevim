@@ -4,7 +4,7 @@ local M = {
 		cmd = "Mason",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ 
+			{
 				"williamboman/mason.nvim",
 				opts = {
 					ui = {
@@ -14,7 +14,7 @@ local M = {
 							package_uninstalled = " ",
 						},
 					},
-				} 
+				}
 			},
 			{ "williamboman/mason-lspconfig.nvim", opts = {} },
 		},
@@ -23,8 +23,8 @@ local M = {
 	blink_cmp = {
 		"saghen/blink.cmp",
 		event = "InsertEnter",
-		opts = { 
-			keymap = { 
+		opts = {
+			keymap = {
 				preset = "enter",
 				["<C-k>"] = { "select_prev", "fallback_to_mappings" },
 				["<C-j>"] = { "select_next", "fallback_to_mappings" },
@@ -32,15 +32,16 @@ local M = {
 
 			completion = {
 				menu = {
-					draw = { 
-						columns = {{ "label", "kind_icon", "kind", gap = 1 }} 
+					draw = {
+						columns = { { "label", "kind_icon", "kind", gap = 1 } },
 					},
 				},
+
+				fuzzy = { implementation = "lua" },
 			},
 
-			fuzzy = { implementation = "lua" },
+			dependencies = { "rafamadriz/friendly-snippets" },
 		},
-		dependencies = { "rafamadriz/friendly-snippets" },
 	},
 
 	lspsaga = {
@@ -51,7 +52,7 @@ local M = {
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-	}, 
+	},
 };
 
 return { M.lsp_base, M.blink_cmp, M.lspsaga };

@@ -7,7 +7,7 @@ vim.o.shiftwidth = 2
 vim.o.laststatus = 3
 
 vim.o.scrolloff = 10
-vim.o.smartcase = true 
+vim.o.smartcase = true
 vim.o.ignorecase = true
 vim.o.cursorline = true
 

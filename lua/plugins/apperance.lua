@@ -4,6 +4,12 @@ local M = {
 		lazy = false,
 		priority = 1000,
 		config = function()
+			require("tokyonight").setup({
+				styles = {
+					comments = { italic = false },
+				},
+			})
+
 			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
@@ -122,7 +128,7 @@ local M = {
 		"nvim-neo-tree/neo-tree.nvim",
 		cmd = "Neotree",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		keys = {{ "<leader>e", ":Neotree toggle reveal<CR>", silent = true }},
+		keys = { { "<leader>e", ":Neotree toggle reveal<CR>", silent = true } },
 		opts = {
 			default_component_configs = {
 				indent = {
@@ -178,7 +184,6 @@ local M = {
 			})
 		end,
 	},
-
 };
 
 return { M.lualine, M.tokyonight, M.noice, M.bufferline, M.indent, M.neo_tree, M.treesitter };
